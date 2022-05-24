@@ -59,7 +59,11 @@ public class View {
 		String PW = sc.nextLine();
 		System.out.print("담당 과목을 입력해주세요 : ");
 		String subject = sc.nextLine();
-		
+		for (int i=0; i<Main.list.size(); i++) {
+			if (ID.equals(Main.list.get(i).getID())) {
+				return null;
+			}
+		}
 		Member teacher = new Teacher(name, ID, PW, subject);
 		return teacher;
 	}
@@ -73,7 +77,11 @@ public class View {
 		String PW = sc.nextLine();
 		System.out.print("전공을 입력해주세요 : ");
 		String subject = sc.nextLine();
-		
+		for (int i=0; i<Main.list.size(); i++) {
+			if (ID.equals(Main.list.get(i).getID())) {
+				return null;
+			}
+		}
 		Member student = new Student(name, ID, PW, subject);
 		return student;
 	}
